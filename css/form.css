@@ -1,0 +1,317 @@
+@import "imports/variables.css";
+@import "imports/media.css";
+
+h1,
+ul,
+.hyperlink,
+a {
+    font-family: var(--heading-link), Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--text-colour);
+}
+
+h1 {
+    font-size: 1.5em;
+    margin: 30px auto 0;
+}
+
+.sign-in h1 {
+    margin: 0 auto;
+}
+
+p {
+    font-family: var(--body-text), Georgia, 'Times New Roman', Times, serif ;
+    color: var(--text-colour);
+    font-size: 0.9em;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    filter: blur(2px);
+}
+
+.logo {
+    max-height: 180px;
+}
+
+main {
+    flex-grow: 1;
+    margin-top: 50px;
+}
+
+.fa-regular {
+    color: var(--cta-colour);
+    font-size: 30px;
+    margin: 10px 0px 0 410px;
+}
+
+.log-in,
+.sign-in {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--dark-colour);
+    max-width: 450px;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    box-shadow: 5px 5px 5px var(--dark-colour);
+}
+
+.form {
+    position: relative;
+    max-width: 250px;
+    margin: 20px auto;
+}
+
+.form__input {
+    width: 100%;
+    max-height: 5px;
+    border: none;
+    border-radius: 5px;
+    padding: 1.25rem;
+}
+
+.form__label,
+.form__label-password {
+    color: var(--text-colour);
+}
+
+ #remember,
+ #terms-conditions {
+    max-height: 20px;
+    max-width: 20px;
+ }
+
+ .card-info div,
+ .buttons input {
+    max-width: 100px;
+    margin: 10px 30px;
+ }
+
+ .card-info,
+ .buttons {
+    display: flex;
+    flex-direction: row;
+    max-width: 350px;
+    margin-left: 65px;
+    align-items: center;
+ }
+
+ .buttons {
+    margin-left: 80px;
+ }
+ 
+ .hyperlink {
+    text-decoration: underline;
+ }
+
+ .hyperlink,
+ .remember,
+ .new {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+ .forgotten {
+    font-size: 0.8em;
+    max-height: 5px;
+    padding-left: 300px;
+}
+
+.new-password {
+    margin: 40px auto 0 auto;
+}
+
+.cta {
+    font-family: var(--cta-font);
+    font-size: 15px;
+    color: var(--dark-colour);
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: var(--cta-colour);
+    width: 120px;
+    height: 50px;
+    margin: 0px 180px auto;
+    cursor: pointer;
+}
+
+.code, 
+.cta:hover,
+.code a {
+    background-color: var(--cta-hover);
+    color: var(--dark-colour);
+    border: none;
+}
+
+.log a {
+    color: var(--dark-colour);
+}
+
+.log a:hover {
+    color: var(--body-text);
+}
+
+.payment {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.code {
+    max-width: 180px;
+    margin: 0px 180px;
+}
+
+.confirm {
+    margin: 0px 20px;
+}
+
+.cancel {
+    max-width: 80px;
+    max-height: 35px;
+    font-size: 0.8em;
+    margin: 0 200px;
+}
+
+footer {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    align-items: center;
+    margin-top: 40px;
+    filter: blur(2px);
+}
+
+.logo__footer {
+    max-width: 180px;
+    min-width: 150px;
+    padding: 0px 50px;
+}
+
+.menu__footer ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav li {
+    display: inline-block;
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu__footer li{
+    font-size: 1em;
+    }
+
+.colour__footer {
+    color: var(--dark-colour);
+}
+
+@media (max-width:850px) {
+    header,
+    footer {
+        filter: none;
+    }
+
+    .log-in,
+    .sign-in {
+        background: var(--background);
+        box-shadow: none;
+        max-width: 450px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .forgotten {
+        width: 150px;
+        padding-left: 320px;
+    }
+
+}
+
+@media (max-width:465px) {
+    .forgotten {
+        font-size: 0.7em;
+        padding-left: 300px;
+    }
+}
+
+@media (max-width:430px) {
+    footer {
+        display: none;
+    }
+
+    main {
+        margin-top: 10px;
+    }
+
+    header,
+    .logo {
+        display: flex;
+    }
+
+    .log-in,
+    .sign-in {
+        margin: 0 10%;
+    }
+
+
+    .forgotten {
+        font-size: 0.7em;
+        padding-left: 205px;
+    }
+
+    .cta {
+        margin-left: 100px;
+    }
+
+    .form {
+        max-width: 190px;
+        margin-left: 50px;
+    }
+
+    .cancel {
+        margin-left: 120px;
+    }
+
+    .fa-regular {
+        display: none;
+    }
+
+    .card-info,
+    .buttons {
+        margin: 0 15px;
+    }
+
+    .card-info {
+        max-width: 265px;
+    }
+
+    .buttons .code {
+        margin: 10px;
+    }
+}
+

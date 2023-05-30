@@ -1,0 +1,147 @@
+@import "imports/variables.css";
+@import "imports/structure.css";
+@import "imports/media.css";
+
+h1 {
+    font-size: clamp(1.5em, 5vw + 0.2em, 2.2em);
+    margin: 10px;
+    padding-top: 30px;
+}
+
+p,
+.hyperlink {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+h1, 
+.account {
+    padding-left: clamp(60px, 20vw, 250px);
+}
+
+.account {
+    background: var(--dark-colour);
+    filter: drop-shadow(5px 5px 5px var(--dark-colour));
+    max-width: 800px;
+    margin: 0 0 0 260px;
+    padding: 20px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 200px 550px;
+    grid-template-rows: 30px repeat(3, 80px);
+}
+
+.email-address,
+.password {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0;
+}
+
+.account-details {
+    display: grid;
+    grid-template-columns: 380px 145px;
+}
+
+.email-hyperlink,
+.password-hyperlink {
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+.membership {
+    grid-column-start: 1;
+}
+
+.user-name,
+.email-info,
+.password-info {
+    grid-column-start: 2;
+    display: grid;
+    grid-template-rows: 20px 20px;
+    gap: 5px;
+}
+
+.info {
+    margin-left: 20px;
+}
+
+.user-name {
+    grid-row-start: 2;
+}
+
+.email-info {
+    grid-row-start: 3;
+}
+
+.password-info {
+    grid-row-start: 4;
+}
+
+
+@media (max-width:1450px) {
+    .account {
+        margin: 0 auto;
+        grid-template-columns: 150px 490px;
+        max-width: 685px;
+    }
+
+    .account-details {
+        grid-template-columns: 340px 145px;
+    }
+
+}
+
+@media (max-width:1000px) {
+    .account {
+        grid-template-columns: 125px 400px;
+        grid-template-rows: 30px repeat(3, 70px);
+        max-width: 580px;
+    }
+
+    .account-details {
+        grid-template-columns: 285px 145px;
+    }
+}
+
+
+@media (max-width:430px) {
+    footer,
+    .membership,
+    .info {
+        display: none;
+    }
+    header {
+        max-width: 430px;
+    }
+
+    h1 {
+       margin-left: 60px;
+    }
+
+    .account {
+        background: var(--background);
+        filter: none;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        gap: 1.2rem;
+        font-size: 1.1em;
+    }
+
+    .account-details {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .email-address,
+    .password {
+        display: block;
+    }
+
+    .hyperlink {
+        padding-left: 15px;
+    }
+}
